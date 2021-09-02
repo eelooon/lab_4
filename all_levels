@@ -1,0 +1,64 @@
+// labaNumber_4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void Hard()
+{
+    
+    string line = "К примеру * умножить на * получиться * , ну почти *)))))";
+    for (size_t i = 0; i < line.length(); i++)
+    {
+        if (line[i] == '*')
+        {
+            
+        }
+    }
+
+    cout << line;
+    
+}
+
+void Middle()
+{
+    string line = "pПолlучиloлLоSсь !";
+    for (size_t i = 65; i < 127; i++)
+    {
+        for (size_t count = 0; count < line.length(); count++)
+        {
+            if (line[count] == i)
+            {
+                line.erase(count, 1);
+            }
+        }
+         
+        if (i == 90)
+            i = 97;
+    }
+    cout << line;
+       
+        
+    
+}
+
+void Basic()
+{
+    string line = "sStop";
+    line.erase(0, 1);
+    cout << line;
+}
+
+int main()
+{
+    setlocale(0 , "ru");
+    cout << "Базовый уровень: ";
+    Basic();
+    cout << endl<<"Средний уровень: ";
+    Middle();
+    cout << endl << "Высокий уровень: ";
+    Hard();
+
+}
+
